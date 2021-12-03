@@ -1,28 +1,50 @@
-body {
-    background-color:#777;
-}
+ *{
+     padding:0;
+     margin:0;
+     box-sizing: border-box;
+     font-family: 'Gwendolyn', cursive;
 
-ul{
+ }
+ 
+ ul {
     display: grid;
     gap:1em;
     grid-auto-rows:22rem;
     /* CON DENSE LO QUE HACEMOS ES QUE RELLENA ESPACIOS EN BLANCO*/
     grid-auto-flow:dense;
-    text-align:center;
+
     /* grid-template-columns: repeat(auto-fit,minmax(15rem,1fr)); */ /* TE ESTIRA LA IMAGEN Y OCUPA TODO EL LAYOUT*/
     /*CON MIN(100%,25REM) TE VA A COGER DE DOS VALORES EL MAS PEQUEÑO*/
     /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem) ,1fr)); */
-   
 
+    text-align: center;
     grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
-   
-    background-color:#777;
-
+    
     padding: 10px;
-  
+} 
+.root{
+   
 }
 
 ul li {
-    list-style:none;
+        transition:1s ease-in-out;
+        list-style: none;
+        cursor:pointer;
+        
+
+    }
+li img {
+    transition:1s linear;
 }
+    li img:hover {
+        position:relative;
+        width:300px;
+        height:600px;
+        z-index:1;
+    }
+
+    ul li p {
+    font-size:25px;
+    font-weight:bold;
+    }
 
