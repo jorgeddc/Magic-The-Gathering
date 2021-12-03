@@ -3,6 +3,26 @@ body {
 }
 
 ul{
-    display:flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap:1em;
+    grid-auto-rows:22rem;
+    /* CON DENSE LO QUE HACEMOS ES QUE RELLENA ESPACIOS EN BLANCO*/
+    grid-auto-flow:dense;
+    text-align:center;
+    /* grid-template-columns: repeat(auto-fit,minmax(15rem,1fr)); */ /* TE ESTIRA LA IMAGEN Y OCUPA TODO EL LAYOUT*/
+    /*CON MIN(100%,25REM) TE VA A COGER DE DOS VALORES EL MAS PEQUEÑO*/
+    /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem) ,1fr)); */
+   
+
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+   
+    background-color:#777;
+
+    padding: 10px;
+  
 }
+
+ul li {
+    list-style:none;
+}
+
