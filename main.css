@@ -5,22 +5,125 @@
      font-family: 'Gwendolyn', cursive;
 
  }
- 
- ul {
+ body {
+     /* display:flex;
+     width:100%;
+     height:100vh;
+     justify-content: center;
+     align-items: center; */
+     background-color: rgb(80, 78, 77);
+ }
+ .up-wizard {
+     width:100%;
+     height:250px;
+     display:flex;
+    justify-content: center;
+     text-align: center;
+     padding:1em;
+  
+    }
+    .color-mag-white{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:190px;
+        height:190px;
+        border-radius: 150px;
+        border:3px solid white;
+
+    }
+    .color-mag-white img {
+        width:150px;
+    }
+ .centerX{
+     display:flex;
+     width:100%;
+     height:380px;
+     justify-content: space-around;
+     align-items:center;
+     padding:2em;
+     font-size:40px;
+}
+.color-mag-black{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:190px;
+    height:190px;
+    border-radius: 150px;
+    border:3px solid black;
+
+}
+.color-mag-black img {
+    width:150px;
+    transform:rotate(90deg)
+}
+.color-mag-blue{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:190px;
+    height:190px;
+    border-radius: 150px;
+    border:3px solid blue;
+}
+.color-mag-blue img {
+    width:150px;
+    transform:rotate(-90deg)
+
+}
+ .down-wizard {
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    width:100%;
+    height:250px;
+  
+    
+    font-size:40px;
+}
+.color-mag-green{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:190px;
+    height:190px;
+    border-radius: 150px;
+    border:3px solid green;
+
+}
+.color-mag-green img {
+    width:150px;
+    transform:rotate(180deg)
+
+}
+
+ .root {
+     width:250px;
+     height:380px;
+     overflow: hidden;
+    }
+ ul 
+ {
+     display:flex;
+     text-align: center;
+     
+ }
+ /*ul {
     display: grid;
     gap:1em;
     grid-auto-rows:22rem;
     /* CON DENSE LO QUE HACEMOS ES QUE RELLENA ESPACIOS EN BLANCO*/
-    grid-auto-flow:dense;
+   /* grid-auto-flow:dense;
 
     /* grid-template-columns: repeat(auto-fit,minmax(15rem,1fr)); */ /* TE ESTIRA LA IMAGEN Y OCUPA TODO EL LAYOUT*/
     /*CON MIN(100%,25REM) TE VA A COGER DE DOS VALORES EL MAS PEQUEÑO*/
     /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem) ,1fr)); */
 
-    text-align: center;
+   /* text-align: center;
     grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
     padding: 10px;
-} 
+} */
 .prueba{
     width:100px;
     height:100px;
@@ -31,10 +134,10 @@ ul li {
         transition:1s ease-in-out;
         list-style: none;
         cursor:pointer;
+        margin:10px;
         
     }
      
-    
 
    
 
