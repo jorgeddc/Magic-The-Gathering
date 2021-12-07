@@ -19,11 +19,12 @@
 
     text-align: center;
     grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
-    
     padding: 10px;
 } 
-.root{
-   
+.prueba{
+    width:100px;
+    height:100px;
+   background-color:blue;
 }
 
 ul li {
@@ -31,20 +32,15 @@ ul li {
         list-style: none;
         cursor:pointer;
         
+    }
+     
+    
 
-    }
-li img {
-    transition:1s linear;
-}
-    li img:hover {
-        position:relative;
-        width:300px;
-        height:600px;
-        z-index:1;
-    }
+   
 
     ul li p {
     font-size:25px;
-    font-weight:bold;
+    font-weight:bolder;
+    margin-bottom:10px;
     }
 
