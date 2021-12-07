@@ -11,7 +11,7 @@
      height:100vh;
      justify-content: center;
      align-items: center; */
-     background-color: rgb(80, 78, 77);
+     background-color: rgb(240, 214, 197);
  }
  .up-wizard {
      width:100%;
@@ -33,7 +33,7 @@
 
     }
     .color-mag-white img {
-        width:150px;
+        width:200px;
     }
  .centerX{
      display:flex;
@@ -55,7 +55,7 @@
 
 }
 .color-mag-black img {
-    width:150px;
+    width:200px;
     transform:rotate(90deg)
 }
 .color-mag-blue{
@@ -68,7 +68,7 @@
     border:3px solid blue;
 }
 .color-mag-blue img {
-    width:150px;
+    width:200px;
     transform:rotate(-90deg)
 
 }
@@ -93,7 +93,7 @@
 
 }
 .color-mag-green img {
-    width:150px;
+    width:200px;
     transform:rotate(180deg)
 
 }
