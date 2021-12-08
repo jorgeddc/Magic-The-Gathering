@@ -16,6 +16,7 @@ function pintarCards()
   cards[0].cards.forEach(element=>{
     const li = document.createElement("li")
     const img = document.createElement("img")
+    img.classList.add('cartas')
     const p = document.createElement("p")
     const containerCard = document.createElement('div')
     
@@ -36,7 +37,7 @@ function pintarCards()
       
       
       mov(containerCard)
-       
+      draggable(containerCard) 
 
      })
      

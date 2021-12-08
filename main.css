@@ -11,7 +11,7 @@
      height:100vh;
      justify-content: center;
      align-items: center; */
-     background-color: rgb(240, 214, 197);
+     background-color: rgb(136, 67, 67);
  }
  .up-wizard {
      width:100%;
@@ -109,6 +109,8 @@
      text-align: center;
      
  }
+
+ /* SUPER GRID */
  /*ul {
     display: grid;
     gap:1em;
@@ -124,11 +126,7 @@
     grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
     padding: 10px;
 } */
-.prueba{
-    width:100px;
-    height:100px;
-   background-color:blue;
-}
+
 
 ul li {
         transition:1s ease-in-out;
@@ -147,3 +145,36 @@ ul li {
     margin-bottom:10px;
     }
 
+.cards.dragging{
+  
+    opacity:0.5;
+}
+.container-white div .ajuste {
+    display:block;
+    border:none;
+    list-style:none;
+    margin:0;
+
+}
+.entrar {
+    position:relative;top:5px;left:0.5px;
+  
+        width:50px;
+        height:65px
+}
+.texto {
+    display:none;
+}
+    /* REPOSITORIOS CARTAS */
+
+    .container-white div{
+        margin:5px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:60px;
+        height:75px; 
+        border:2px solid white;
+        margin-left:15px;
+        overflow:hidden;
+    }
