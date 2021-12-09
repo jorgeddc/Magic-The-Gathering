@@ -26,37 +26,26 @@ function draggable (containerCard)
     
             
             element.appendChild(encima)
+            document.querySelector(".item-container").classList.add(`onew${cont}`)
+            cont++
             document.querySelector('.cards').classList.add('ajuste')
             document.querySelector('.cartas').classList.add('entrar')
             document.querySelector('p').classList.add('texto')
 
-            const itemContainer = document.querySelector('.item-container')
-           itemContainer.addEventListener('mouseover' , e =>{
-               if (e.target.classList.contains('onew1'))
-               {
-                   console.log(element)
-                document.querySelector('.onew1').style.display='none'
-                
-               }
-               if (element.classList.contains('onew2'))
-               console.log(element)
-               {
-                // document.querySelector('.onew2').style.border='none'
-                
-               }
-               if (element.classList.contains('onew3'))
-               
-               {
-                   console.log(element)
-                // document.querySelector('.onew3').style.border='none'
-                
-               }
-           })
-        //    if (document.querySelector('.cards').classList.contains('ajuste')){
-        //    cont++
-        //    document.querySelector('.onew3').style.border='none'
-        //    }
-
+         
+            
+       containerWhite.forEach(element =>{  
+           if (containerWhite[0].classList.contains("onew0") && containerWhite[0].classList.contains("onew1") && containerWhite[0].classList.contains("onew2"))
+            {
+               document.querySelector(".container-white").style.display="none"
+               document.querySelector(".color-mag-white").classList.add("active")
+            }
+        })
+         
+          
+            
+     
+           
    
     
      })
