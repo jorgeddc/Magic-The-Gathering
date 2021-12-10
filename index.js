@@ -1,28 +1,32 @@
-const cards = []
+const cardsArray = []
+let CardsArray = []
 const root = document.querySelector(".root")
 const ul = document.createElement("ul")
+
 fetch ("https://api.magicthegathering.io/v1/cards")
 
 .then ((result) => result.json())
 .then (data => {
-  cards.push(data)
+  cardsArray.push(data)
   pintarCards()
 })
 
 
 function pintarCards()
-{
+{   
   
-  cards[0].cards.forEach(element=>{
+  cardsArray[0].cards.map((element ) =>{
+  let i= Math.floor(Math.random() * 100)
+
     const li = document.createElement("li")
     const img = document.createElement("img")
     img.classList.add('cartas')
     const p = document.createElement("p")
     const containerCard = document.createElement('div')
     
-       img.src = element.imageUrl
+       img.src =  cardsArray[0].cards[i].imageUrl
        let imagenNo = img.src
-       let name = element.name
+       let name =cardsArray[0].cards[i].name
      
     
        p.innerText+=name
@@ -37,7 +41,7 @@ function pintarCards()
       
       
       mov(containerCard)
-      draggable(containerCard) 
+      recojo(containerCard) 
 
      })
      
@@ -47,7 +51,7 @@ function pintarCards()
         const card = document.querySelectorAll('.cards')
         card.forEach((element,index) =>{  
         element.addEventListener('mouseover', e =>{
-        // if(e.target.classList.contains('p'))
+      
           card[index].classList.add('tePille')
 
              VanillaTilt.init(document.querySelector('.tePille'), {
