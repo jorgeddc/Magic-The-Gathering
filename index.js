@@ -1,6 +1,4 @@
 const cardsArray = []
-let ColoR  = []
-let j=0;
 const root = document.querySelector(".root")
 const ul = document.createElement("ul")
 
@@ -32,13 +30,9 @@ function pintarCards()
     let name =cardsArray[0].cards[i].name
     let colors =  cardsArray[0].cards[i].colors 
     let stringColors = String(colors) 
+    img.classList.add(`${stringColors}`)
     
-     if(j==0) //ESTA CONDICION ENVIA SOLO UN ARRAY RELLENO CON LOS COLORES
-     { 
-       ColoR.push(stringColors)
-      colorCorrecto(ColoR)
-    }  
-      j++
+  
      
     
         
