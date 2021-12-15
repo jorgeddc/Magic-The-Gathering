@@ -109,7 +109,7 @@
      min-width: 250px;
     
      height:380px;
-      overflow: hidden; 
+      /* overflow: hidden;  */
     }
  ul 
  {

@@ -1,12 +1,15 @@
 const cardsArray = []
 const root = document.querySelector(".root")
 const ul = document.createElement("ul")
+let imagenes = 1 
+let siempreesescero=0
 
 fetch ("https://api.magicthegathering.io/v1/cards")
 
 .then ((result) => result.json())
 .then (data => {
   cardsArray.push(data)
+
   pintarCards()
 })
 
@@ -14,9 +17,13 @@ fetch ("https://api.magicthegathering.io/v1/cards")
 
 function pintarCards()
 {   
+ 
   
-  cardsArray[0].cards.forEach((element,index) =>{
-    let i= Math.floor(Math.random() * 100)
+ for (let j=siempreesescero;j<imagenes;j++)
+{
+
+
+     let i= Math.floor(Math.random() * 100)
  
     
     const li = document.createElement("li")
@@ -31,15 +38,7 @@ function pintarCards()
     let colors =  cardsArray[0].cards[i].colors 
     let stringColors = String(colors) 
     img.classList.add(`${stringColors}`)
-    
-  
-     
-    
-        
-    
-    
-    
-    p.innerText+=name
+     p.innerText+=name
     li.appendChild(p)
     if (imagenNo!="http://127.0.0.1:5501/undefined")
     {
@@ -51,10 +50,10 @@ function pintarCards()
         
         
         mov(containerCard)
-        recojo()
         
         
-      })
+        recojo(imagenNo)
+      }
       
       function mov(containerCard){
         
