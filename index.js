@@ -3,7 +3,8 @@ const root = document.querySelector(".root")
 const ul = document.createElement("ul")
 let imagenes = 1 
 let siempreesescero=0
-
+let contador = 0
+let j =0
 fetch ("https://api.magicthegathering.io/v1/cards")
 
 .then ((result) => result.json())
@@ -18,9 +19,7 @@ fetch ("https://api.magicthegathering.io/v1/cards")
 function pintarCards()
 {   
  
-  
- for (let j=siempreesescero;j<imagenes;j++)
-{
+ 
 
 
      let i= Math.floor(Math.random() * 100)
@@ -49,16 +48,18 @@ function pintarCards()
         }
         
         
-        mov(containerCard)
+        mov(containerCard,imagenNo,cardsArray)
         
+        recojo(contador,imagenNo)
+        contador++
         
-        recojo(imagenNo)
       }
       
       function mov(containerCard){
         
         containerCard.classList.add("cards")
         const card = document.querySelectorAll('.cards')
+        
         card.forEach((element,index) =>{  
           element.addEventListener('mouseover', e =>{
             
@@ -69,19 +70,19 @@ function pintarCards()
               speed: 400
             });
           })
-       element.addEventListener('mouseout', e =>{
-         card[index].classList.remove('tePille')
-       })
+          element.addEventListener('mouseout', e =>{
+            card[index].classList.remove('tePille')
+          })
         })
-      }  
+       
 
-
-
-   
-  
-               
-               
+      
+      
+      
+      
+      
+      
           
-  
+      
   }
 
