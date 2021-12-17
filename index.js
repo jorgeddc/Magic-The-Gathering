@@ -19,7 +19,7 @@ fetch ("https://api.magicthegathering.io/v1/cards")
 function pintarCards()
 {   
  
- 
+
 
 
      let i= Math.floor(Math.random() * 100)
@@ -50,7 +50,7 @@ function pintarCards()
         
         mov(containerCard,imagenNo,cardsArray)
         
-        recojo(contador,imagenNo)
+        recojo(contador,imagenNo,stringColors)
         contador++
         
       }
