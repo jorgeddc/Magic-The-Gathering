@@ -1,5 +1,6 @@
 function recojo (contador, imagenNo,color)
 {
+   
     console.log(color)
     const contenedorWhite = document.querySelector(".container-white")    
     

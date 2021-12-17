@@ -5,6 +5,7 @@ let imagenes = 1
 let siempreesescero=0
 let contador = 0
 let j =0
+const Btn = document.querySelector("button")
 fetch ("https://api.magicthegathering.io/v1/cards")
 
 .then ((result) => result.json())
@@ -14,6 +15,14 @@ fetch ("https://api.magicthegathering.io/v1/cards")
   pintarCards()
 })
 
+Btn.addEventListener("click", e =>
+
+{
+
+  
+  pintarCards()
+
+})
 
 
 function pintarCards()
@@ -41,6 +50,7 @@ function pintarCards()
     li.appendChild(p)
     if (imagenNo!="http://127.0.0.1:5501/undefined")
     {
+      Btn.style.display="none"
       li.appendChild(img)
       containerCard.appendChild(li)      
       ul.appendChild(containerCard)
