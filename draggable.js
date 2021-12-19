@@ -2,18 +2,20 @@ function recojo (contador, imagenNo,color)
 {
    
     console.log(color)
-    const contenedorWhite = document.querySelector(".container-white")    
-    
-    
-    const draggable = document.querySelectorAll('.cards') 
-     const containerWhite = document.querySelectorAll('.item-container')
+            const contenedorWhite = document.querySelector(".container-white")    
+            const contendedorBlue = document.querySelector('.container-blue')
+            const contendedorBlack = document.querySelector('.container-black')
+            const draggable = document.querySelectorAll('.cards') 
+            const containerWhite = document.querySelectorAll('.item-container')
      
      
      
      
      if (color=='White') 
-     { 
-     draggable.forEach(element =>{
+      { 
+     
+     
+        draggable.forEach(element =>{
          element.addEventListener('dragstart', (e)=>{
              element.classList.add('dragging')
              
