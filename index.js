@@ -17,21 +17,17 @@ fetch ("https://api.magicthegathering.io/v1/cards")
 
 Btn.addEventListener("click", e =>
 
-{
-
-  
-  pintarCards()
-
-})
+{ pintarCards()})
 
 
 function pintarCards()
 {   
  
+ 
 
 
 
-     let i= Math.floor(Math.random() * 100)
+      let i= Math.floor(Math.random() * 100)
  
     
     const li = document.createElement("li")
@@ -50,7 +46,7 @@ function pintarCards()
     li.appendChild(p)
     if (imagenNo!="http://127.0.0.1:5501/undefined")
     {
-      Btn.style.display="none"
+     
       li.appendChild(img)
       containerCard.appendChild(li)      
       ul.appendChild(containerCard)
@@ -59,7 +55,7 @@ function pintarCards()
         
         
         mov(containerCard,imagenNo,cardsArray)
-        
+        chooseColor(stringColors)
         recojo(contador,imagenNo,stringColors)
         contador++
         

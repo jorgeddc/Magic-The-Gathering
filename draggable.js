@@ -1,40 +1,42 @@
 function recojo (contador, imagenNo,color)
 {
    
-    console.log(color)
-            const contenedorWhite = document.querySelector(".container-white")    
-            const contendedorBlue = document.querySelector('.container-blue')
-            const contendedorBlack = document.querySelector('.container-black')
-            const draggable = document.querySelectorAll('.cards') 
-            const containerWhite = document.querySelectorAll('.item-container')
+   
+          
+             const containerWhite = document.querySelectorAll('.item-container')
+             const draggable = document.querySelectorAll('.cards')
      
      
      
-     
-     if (color=='White') 
-      { 
-     
-     
-        draggable.forEach(element =>{
-         element.addEventListener('dragstart', (e)=>{
-             element.classList.add('dragging')
              
-           
-             
-             
-            })
-        })
-
-        draggable.forEach(element =>{    
-        element.addEventListener('dragend', ()=>{
-                element.classList.remove('dragging')
-                
-                if (imagenNo=="http://127.0.0.1:5501/undefined"){
+             if (color) 
+             { 
+                 
+                 
+                 draggable.forEach(element =>{
+                     element.addEventListener('dragstart', (e)=>{
+                         element.classList.add('dragging')
+                         
+                         
+                         
+                         
+                        })
+                    })
                     
-                   console.log('joder')
+                    draggable.forEach(element =>{    
+                        element.addEventListener('dragend', ()=>{
+                            
+                            const encima = document.querySelector('.dragging')
+                            chooseColor(encima,color)
+                            element.classList.remove('dragging')
+                            if (imagenNo=="http://127.0.0.1:5501/undefined"){
+                    
+                  
+                   
                    
                 }
-                else{ pintarCards()}
+                else{ pintarCards()
+                   }
                 
                 
                 
@@ -43,7 +45,7 @@ function recojo (contador, imagenNo,color)
             
 
         
-    containerWhite.forEach((element,index)=>{
+    document.querySelectorAll(`.item-${color}`).forEach((element,index)=>{
         element.addEventListener('dragover', e =>{
             e.preventDefault()
             
@@ -52,31 +54,33 @@ function recojo (contador, imagenNo,color)
         element.addEventListener('drop', e =>{
             e.preventDefault()
             
-            const encima = document.querySelector('.dragging')
+           // COLOCA LAS CARTAS EN POSICION QUE QUIERO
+            
             //COLOCA LAS CART
             
-            if (contador===0)
-            {containerWhite[2].appendChild(encima)
-            }
-           if (contador===1){ 
-                containerWhite[1].appendChild(encima)
-             }
-             if (contador===2) { 
-                 containerWhite[0].appendChild(encima)}
-    
-    
+        //     if (contador===0)
+        //     {  document.querySelectorAll(`.item-${color}`)[2].appendChild(encima)
+        //     }
+        //    if (contador===1){ 
+        //     document.querySelectorAll(`.item-${color}`)[1].appendChild(encima)
+        //      }
+        //      if (contador===2) { 
+        //         document.querySelectorAll(`.item-${color}`)[0].appendChild(encima)}
+         
+        
+        const cartasDentro = document.querySelector('.cards')
           
-    document.querySelector(".item-container").classList.add(`onew${contador}`)
+         cartasDentro.classList.add('ajuste')
+        document.querySelector('.cartas').classList.add('entrar')
+        document.querySelector('p').classList.add('texto')
+    document.querySelector(`.item-${color}`).classList.add(`onew${contador}`)
 
-     draggable.forEach(element =>{ 
-        document.querySelector('.cards').classList.add('ajuste')
-    document.querySelector('.cartas').classList.add('entrar')
-    document.querySelector('p').classList.add('texto')
-})
+    
+
 
 containerWhite.forEach(element =>{  
 
-    if (containerWhite[0].classList.contains("onew0") && containerWhite[0].classList.contains("onew1") && containerWhite[0].classList.contains("onew2"))
+    if ( document.querySelectorAll(`.item-${color}`).classList.contains("onew0") &&  document.querySelectorAll(`.item-${color}`).classList.contains("onew1") &&  document.querySelectorAll(`.item-${color}`).classList.contains("onew2"))
     {
     
         document.querySelector(".color-mag-white").classList.add("active")
