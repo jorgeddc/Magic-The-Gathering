@@ -237,7 +237,7 @@ ul li {
         width:60px;
         height:75px; 
         border:2px solid #5EA3C8;
-        margin-left:15px;
+        margin-left:20px;
         overflow:hidden;
     }
     .container-black{
@@ -254,6 +254,6 @@ ul li {
             width:60px;
             height:75px; 
             border:2px solid black;
-            margin-left:15px;
+            margin-left:20px;
             overflow:hidden;
         }

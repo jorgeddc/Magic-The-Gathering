@@ -3,7 +3,7 @@ arrayColorB=[]
 arrayColorBl=[]
 
 function chooseColor (encima,color,draggable){
-  console.log(draggable)
+  
 switch (color) {
     case "White":
    arrayColorW.push(color)
@@ -14,8 +14,7 @@ switch (color) {
         if (arrayColorW.length === 2) { 
           document.querySelectorAll(`.item-${color}`)[1].appendChild(encima)
       ajusteCards(color,draggable)}
-    
-          if (arrayColorW.length === 3) { 
+      if (arrayColorW.length === 3) { 
             document.querySelectorAll(`.item-${color}`)[0].appendChild(encima)
             document.querySelector('.color-mag-white').classList.add('active')
       ajusteCards(color,draggable)}
