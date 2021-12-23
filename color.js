@@ -17,7 +17,11 @@ switch (color) {
       if (arrayColorW.length === 3) { 
             document.querySelectorAll(`.item-${color}`)[0].appendChild(encima)
             document.querySelector('.color-mag-white').classList.add('active')
-      ajusteCards(color,draggable)}
+      ajusteCards(color,draggable)
+      document.querySelector(".down-logo").style.top="-3500px"
+      document.querySelector(".root").style.display="none"
+      document.querySelector(".all-cards").style.display="grid"
+    }
     
         
     
@@ -43,7 +47,13 @@ switch (color) {
              document.querySelectorAll(`.item-${color}`)[0].appendChild(encima)
             document.querySelector('.color-mag-blue').classList.add('active')
 
-      ajusteCards(color,draggable)}
+      ajusteCards(color,draggable)
+      document.querySelector(".down-logo").style.top="-3500px"
+      document.querySelector(".root").style.display="none"
+      document.querySelector(".all-cards").style.display="grid"
+
+
+    }
     
     
       break
@@ -64,6 +74,12 @@ switch (color) {
             document.querySelector('.color-mag-black').classList.add('active')
 
       ajusteCards(color,draggable)
+      document.querySelector(".down-logo").style.top="-3500px"
+      document.querySelector(".root").style.display="none"
+      document.querySelector(".all-cards").style.display="grid"
+
+
+
     }
       break;
    

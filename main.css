@@ -113,32 +113,34 @@
    
 
 }
- .down-wizard {
-    display:flex;
-    justify-content: center;
-    align-items: end;
+.down-logo
+{
+    margin-top:50px;
     width:100%;
-    height:250px;
-  
-    
-    font-size:40px;
-}
-.logo{
+   
     display:flex;
-    justify-content: center;
+    flex-direction:column;
     align-items: center;
-    width:100%;
-    height:190px;
-    border-radius: 150px;
-   
-
-}
-.logo img {
-    width:500px;
-   
-
+    position:relative;
+    transition:20s linear;
+    top:0;
 }
 
+.logo img{
+    width:450px;
+}
+.all-cards {
+    width: 40%;
+    height:200px;
+     display: none;
+    /* gap:1em; */
+   grid-template-columns: repeat(5 , 150px);
+   gap:10px;
+  
+}
+.all-cards ul li img {
+    width:150px;
+}
  .root {
     width:200px;
     min-width: 290px;

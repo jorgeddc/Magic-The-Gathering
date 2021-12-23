@@ -44,7 +44,8 @@ function pintarCards()
     img.classList.add(`${stringColors}`)
      p.innerText+=name
     li.appendChild(p)
-    if (imagenNo!="http://127.0.0.1:5501/undefined")
+   
+    if (imagenNo!="http://127.0.0.1:5502/undefined")
     {
      
       li.appendChild(img)

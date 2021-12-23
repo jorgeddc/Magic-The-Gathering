@@ -20,8 +20,8 @@ draggable.forEach(element =>{
         
         element.classList.remove('dragging')
         
-        if (imagenNo=="http://127.0.0.1:5501/undefined"){
-            
+        if (imagenNo=="http://127.0.0.1:5502/undefined" ){
+           
         }
         else{ pintarCards()
         }
